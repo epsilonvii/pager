@@ -1,0 +1,4 @@
+move udhcpc.wlan0 to /etc/init.d 
+rc-service add /etc/init.d/udhcpc.wlan0 to default
+
+copy contents of usercfg.txt to /boot/usercfg.txt

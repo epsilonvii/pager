@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+
+interface=${SVCNAME#*.}
+pidfile="/run/udhcpc.${interface}.pid"
+
+depend() {
+	need wpa_supplicant
+	use dns
+}
+
+start() {
+	udhcpc -i "$interface" -p "$pidfile" -b
+	eend $?
+}

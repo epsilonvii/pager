@@ -1,0 +1,3 @@
+dtparam=spi=on
+dtoverlay=spi1-3cs
+dtoverlay=dwc2, dr_mode=peripheral
